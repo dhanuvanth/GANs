@@ -43,8 +43,8 @@ print("[INFO] loading MNIST dataset...")
 ## Collect all data from train and test dataset and combine the both
 #trainImages = np.concatenate([trainX, testX]) ## Image shape = (28,28)
 trainImages = []
-for image in os.listdir("all"):
-    img = cv2.imread(os.path.join("all",image))
+for image in os.listdir("pokemon_jpg"):
+    img = cv2.imread(os.path.join("pokemon_jpg",image))
     img = cv2.resize(img,(28,28))
     if img is not None:
         trainImages.append(img)
